@@ -1,11 +1,21 @@
 #include <iostream>
- using namespace std;
+#include "Entrenador.h"
+#include "Pokemon.h"
+#include "Medalla.h"
+#include "Pokebola.h"
+#include <string>
+
 
  int main() {
-     cout << "Mariana change";
-     cout << "ki onda" ;  
+    std::string nombre;
+    int años;
+    int medallas;
+    std::cout << "Write your Champion name: ";
+	std::cin >> nombre;
+	std::cout << "Write your years of experience";
+	std::cin >> años;
+	std::cout << "Write the quantoty of medals you have";
+	std::cin >> medallas; 
  }
 
- int function() {
-     cout << "Prueba para mariana, si ves los cambios? ";
- }
+ 
