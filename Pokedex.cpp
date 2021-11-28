@@ -1,11 +1,9 @@
-//hola popo
+#include <iostream>
 
-//akdjfj
+using namespace std;
 
-///asjdfljalk
+int main() {
 
-// kkkkk
- 
-// nalga
-
-// oi
+    cout << "hoal mundo" << endl;
+    return 0;
+}
