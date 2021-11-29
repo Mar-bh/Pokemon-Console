@@ -5,11 +5,11 @@
 
 Entrenador::Entrenador() {
 	nombre = "Mariana";
-	años = 18;
+	anios = 18;
 	medallas = 0;
 }
-Entrenador::Entrenador(std::string _nomb, int _años, int _meda) {
+Entrenador::Entrenador(std::string _nomb, int _anios, int _meda) {
 	nombre = _nomb;
-	años = _años;
+	anios = _anios;
 	medallas = _meda;
 }
