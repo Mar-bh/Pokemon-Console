@@ -8,12 +8,12 @@
 
  int main() {
     std::string nombre;
-    int años;
+    int experiencia;
     int medallas;
     std::cout << "Write your Champion name: ";
 	std::cin >> nombre;
 	std::cout << "Write your years of experience";
-	std::cin >> años;
+	std::cin >> experiencia;
 	std::cout << "Write the quantoty of medals you have";
 	std::cin >> medallas; 
  }

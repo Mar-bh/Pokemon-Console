@@ -9,8 +9,27 @@ class Entrenador {
         Entrenador(std::string,int,int);
     private:
         std::string nombre;
-        int años;
+        int experiencia;
         int medallas;
+
+
+
+	double getx() const;
+	double gety() const;
+
+	void setx(double);
+	void sety(double);
+
+	double distance(Punto);
+	std::string toStringPunto();
+	void imprime();
+
+private:
+	double x;
+	double y;
+	std::string name;
+	//double x;
+	//		y;
 };
 
 #endif
