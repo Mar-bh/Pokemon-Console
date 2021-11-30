@@ -17,17 +17,16 @@ Entrenador::Entrenador(std::string _nomb, int _experiencia, int _meda) {
 //Metodos de acceso o getters
 std::string Entrenador::getnombre() const {
 	return nombre;
-
 }
 
 int Entrenador::getexperiencia() const {
 	return experiencia;
-
 }
+
 int Entrenador::getmedallas() const {
 	return medallas;
-
 }
+
 
 //Metodos modificadores o setters
 void Entrenador::setnombre(std::string _nom) {
