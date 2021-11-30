@@ -15,15 +15,40 @@ Entrenador::Entrenador(std::string _nomb, int _experiencia, int _meda) {
 }
 
 //Metodos de acceso o getters
-std::string Entrenador::getnombre() const {
+double Entrenador::getnombre() const {
 	return nombre;
 
 }
-int Entrenador::getexperiencia() const {
+
+double Entrenador::getexperiencia() const {
 	return experiencia;
 
 }
-int Entrenador::getmedallas() const {
-	return medallas;
+double Entrenador::getmedallas() const {
+	return medalla;
 
+}
+
+//Metodos modificadores o setters
+void Punto::setx(double _valx) {
+	x = _valx;
+}
+void Punto::sety(double _valy) {
+	y = _valy;
+}
+
+//Metodos adicionales
+double Punto::distance(Punto P) {
+	double dist = sqrt(pow(P.getx() - x, 2) + pow(P.gety() - y, 2));
+	return dist;
+}
+
+std::string Punto::toStringPunto() {
+	std::string toPrint = "(" + std::to_string(x) + "," + std::to_string(y) + ")";
+	return toPrint;
+
+}
+
+void Punto::imprime() {
+	std::cout << "x: " << x << " y: " << y << std::endl;
 }
