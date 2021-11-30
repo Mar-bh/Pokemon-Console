@@ -1,6 +1,7 @@
 #ifndef ENTRENADOR_H
 #define ENTRENADOR_H
 #include <string>
+#include "Medalla.h"
 
 class Entrenador {
 
