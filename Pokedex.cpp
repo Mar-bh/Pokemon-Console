@@ -10,13 +10,14 @@
     std::string nombre;
     int experiencia;
     int medallas;
+    std::string rango;
     std::cout << "Write your Champion name: ";
 	std::cin >> nombre;
 	std::cout << "Write your years of experience";
 	std::cin >> experiencia;
 	std::cout << "Write the quantoty of medals you have";
 	std::cin >> medallas; 
-    Entrenador entrenador(nombre, experiencia, medallas);
+    Entrenador entrenador(nombre, experiencia, medallas,rango);
 	entrenador.imprime();
     
  }
