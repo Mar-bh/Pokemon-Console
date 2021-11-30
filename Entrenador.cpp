@@ -27,3 +27,15 @@ int Entrenador::getmedallas() const {
 	return medallas;
 
 }
+//Metodos modificadores o setters
+void Entrenador::setnombre(std::string _nom) {
+	nombre = _nom;
+}
+void Entrenador::setexperiencia(int _exp) {
+	experiencia = _exp;
+}
+void Entrenador::setmedallas(int _med) {
+	medallas = _med;
+}
+
+//Metodos adicionales
