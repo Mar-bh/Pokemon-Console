@@ -1,7 +1,7 @@
 #ifndef POKEMON_H
 #define POKEMON_H
 #include <string>
-
+const int MAX=4;
 class Pokemon {
 
     public:
@@ -10,7 +10,7 @@ class Pokemon {
         std::string getNombre() const;
         std::string getTipo() const;
         int getNivel() const;
-        std::string[] getHabilidades() const;
+        std::string getHabilidades() const;
         void setNombre(std::string);
         void setTipo(std::string);
         void setNivel(std::string);
@@ -23,8 +23,8 @@ class Pokemon {
     std::string nombre;
     std::string tipo;
     int nivel;
-    std::string[] habilidades;
+    std::string habilidades[MAX];
         
 };
 
-#endif
+#endif //Pokemon_H
