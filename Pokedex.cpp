@@ -16,6 +16,9 @@
 	std::cin >> experiencia;
 	std::cout << "Write the quantoty of medals you have";
 	std::cin >> medallas; 
+    Entrenador entrenador(nombre, experiencia, medallas);
+	entrenador.imprime();
+    
  }
 
  

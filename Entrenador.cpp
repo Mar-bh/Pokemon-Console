@@ -40,3 +40,6 @@ void Entrenador::setmedallas(int _med) {
 }
 
 //Metodos adicionales
+void Entrenador::imprime() {
+	std::cout << "\n//Alumno// \nNombre: \t" << nombre << "\nMatricula: \t" << experiencia << "\nEdad: \t\t" << medallas;
+}

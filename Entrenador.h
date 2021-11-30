@@ -17,6 +17,7 @@ class Entrenador {
 	    void setexperiencia(int);
         void setmedallas(int);
 
+        void imprime();
     private:
         std::string nombre;
         int experiencia;
