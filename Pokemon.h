@@ -7,6 +7,7 @@ class Pokemon {
     public:
         Pokemon();
         
+        
     private:
         
 };

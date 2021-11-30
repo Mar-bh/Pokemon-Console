@@ -14,6 +14,7 @@ class Pokebola {
         void setPokemon(Pokemon);
         void atrapar(bool);
         void liberar(bool);
+        void imprime();
         
     private:
     std::string tipo;
