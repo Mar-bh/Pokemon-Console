@@ -7,29 +7,20 @@ class Entrenador {
     public:
         Entrenador();
         Entrenador(std::string,int,int);
+
+        std::string getnombre() const;
+        int getexperiencia() const;
+        int getmedallas() const;
+
+        void setnombre(std::string);
+	    void setexperiencia(int);
+        void setmedallas(int);
+
     private:
         std::string nombre;
         int experiencia;
         int medallas;
-
-
-
-	double getx() const;
-	double gety() const;
-
-	void setx(double);
-	void sety(double);
-
-	double distance(Punto);
-	std::string toStringPunto();
-	void imprime();
-
-private:
-	double x;
-	double y;
-	std::string name;
-	//double x;
-	//		y;
+        
 };
 
 #endif
