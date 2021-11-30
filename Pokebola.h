@@ -1,21 +1,24 @@
 #ifndef POKEBOLA_H
 #define POKEBOLA_H
 #include <string>
+#include "Pokemon.h"
 
 class Pokebola {
 
     public:
         Pokebola();
-        Pokebola(std::string, std::string);
-        std::string getNombre() const;
-        std::string getValor() const;
-        void setNombre(std::string);
-        void setValor(std::string);
-        void imprime();
+        Pokebola(std::string, Pokemon);
+        std::string getTipo() const;
+        Pokemon getPokemon() const;
+        void setTipo(std::string);
+        void setPokemon(Pokemon);
+        void atrapar(bool);
+        void liberar(bool);
         
     private:
-        std::string nombre;
-        std::string valor;
+    std::string tipo;
+    Pokemon pokemon;
+        
 };
 
 #endif //Pokebola_H
