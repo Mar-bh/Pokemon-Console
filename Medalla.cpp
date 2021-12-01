@@ -12,7 +12,7 @@ Medalla::Medalla(std::string _nombre, std::string _valor){
     valor = _valor;
 }
 
-std::string Medalla::getNombre(){
+std::string Medalla::getNombre()const{
     return nombre;
 }
 

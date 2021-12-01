@@ -9,15 +9,15 @@ class Entrenador {
         Entrenador();
         Entrenador(std::string,int,int,std::string);
 
-        std::string getnombre() const;
-        int getexperiencia() const;
-        int getmedallas() const;
-        std::string getrango() const;
-
-        void setnombre(std::string);
-	    void setexperiencia(int);
-        void setmedallas(int);
-        void setrango(std::string);
+        std::string getNombre() const;
+        int getExperiencia() const;
+        int getMedallas() const;
+        std::string getRango() const;
+    
+        void setNombre(std::string);
+	    void setExperiencia(int);
+        void setMedallas(int);
+        void setRango(std::string);
 
         void imprime();
     private:

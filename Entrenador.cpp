@@ -18,33 +18,33 @@ Entrenador::Entrenador(std::string _nomb, int _expe, int _meda,std::string _rang
 }
 
 //Metodos de acceso o getters
-std::string Entrenador::getnombre() const {
+std::string Entrenador::getNombre() const {
 	return nombre;
 }
 
-int Entrenador::getexperiencia() const {
+int Entrenador::getExperiencia() const {
 	return experiencia;
 }
 
-int Entrenador::getmedallas() const {
+int Entrenador::getMedallas() const {
 	return medallas;
 }
 
-std::string Entrenador::getrango() const {
+std::string Entrenador::getRango() const {
 	return rango;
 }
 
 //Metodos modificadores o setters
-void Entrenador::setnombre(std::string _nom) {
+void Entrenador::setNombre(std::string _nom) {
 	nombre = _nom;
 }
-void Entrenador::setexperiencia(int _exp) {
+void Entrenador::setExperiencia(int _exp) {
 	experiencia = _exp;
 }
-void Entrenador::setmedallas(int _med) {
+void Entrenador::setMedallas(int _med) {
 	medallas = _med;
 }
-void Entrenador::setrango(std::string _ran) {
+void Entrenador::setRango(std::string _ran) {
 	rango = _ran;
 }
 
