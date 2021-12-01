@@ -20,23 +20,40 @@ Pokemon Pokebola::getPokemon() const{
     return pokemon;
 }
 
-void Pokebola::setTipo(std::string){
-    
+void Pokebola::setTipo(std::string _tipo){
+    tipo = _tipo;
+}
+void Pokebola::setPokemon(Pokemon _pokemon){
+    pokemon = _pokemon;
+}
+
+void Pokebola::atrapar(bool _atrapa){
+    Pokebola pokebola(tipo, pokemon);
+    if(_atrapa == true){
+        pokebola.setPokemon();
+      
+    }
 
 }
 
-void Pokebola::setPokemon(Pokemon){
+void Pokebola::liberar(bool _libera){
+    Pokebola pokebola(tipo, pokemon);
+     if(_libera == true){
+        pokebola.setPokemon(Pokemon());
+    }
 
 }
 
-void Pokebola::atrapar(bool){
+void Pokebola::imprime(){
+    Pokebola pokebola(tipo, pokemon);
+    std::cout << "---------------------" << std::endl;
+    std::cout << "-------POKEBOLA------" << std::endl;
+    std::cout << "Tipo: " << tipo << std::endl;
+    std::cout << "Contiene Pokemon: ";
+    pokemon.imprime();
+    std::cout << "---------------------" << std::endl;
 
-}
 
-void Pokebola::liberar(bool){
-    
-}
 
-void imprime(){
 
 }
