@@ -11,14 +11,15 @@ class Pokebola {
         std::string getTipo() const;
         Pokemon getPokemon() const;
         void setTipo(std::string);
-        void setPokemon(Pokemon);
-        void atrapar(bool);
-        void liberar(bool);
+        //void setPokemon(Pokemon);
+        int atrapar(Pokemon);
+        int liberar();
         void imprime();
         
     private:
     std::string tipo;
     Pokemon pokemon;
+    bool ocupada;
         
 };
 
