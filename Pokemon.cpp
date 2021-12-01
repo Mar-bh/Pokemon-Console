@@ -55,3 +55,4 @@ void Pokemon::imprime() {
 void Pokemon::imprimirHabilidad(int opcion) {
 	std::cout << "La habilidad que el Pokemon"<< nombre << "utilizara es: " << habilidades[opcion]; // habilidad
 }
+

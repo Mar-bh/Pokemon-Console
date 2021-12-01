@@ -60,30 +60,7 @@ void Pokebola::imprime(){
     }
     std::cout << "---------------------" << std::endl;
 }
-void llenaPokebola(Pokemon poke[],int &numero){
-    float precio;
-    int numero;
-    std::string nombre;
-    std::ifstream archivo;
-    archivo.open("Pokemon.txt");
-    while(archivo >> nombre >> precio){
-        poke[].setNombre(nombre);
-        poke[].setPrecio(precio);
-    }
-    archivo.close();
-}
 
-void llenaInventario(Producto prod[],int &cantidad){
-    float precio;
-    string nombre;
-    cantidad = 0;
-    ifstream archivo;
-    archivo.open("Productos.txt");
-    while(archivo >> nombre >> precio){
-        prod[cantidad].setNombre(nombre);
-        prod[cantidad].setPrecio(precio);
-        cantidad++;
-    }
-    archivo.close();
-}
+
+
 

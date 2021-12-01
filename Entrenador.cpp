@@ -4,8 +4,8 @@
 #include <string>
 
 Entrenador::Entrenador() {
-	nombre = "Mariana";
-	experiencia = 18;
+	nombre = "Invitiado";
+	experiencia = 0;
 	medallas = 0;
 	rango = "Principiante";
 }
