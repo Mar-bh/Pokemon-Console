@@ -33,7 +33,7 @@
 
     Entrenador entrenador(nombre, experiencia, medallas,rango);
 	entrenador.imprime();
-    Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
+    Pokemon pokemon(nombrePoke, tipo, nivel,habilidades); 
 	pokemon.imprime();
  }
 
