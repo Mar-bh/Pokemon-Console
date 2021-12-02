@@ -1,7 +1,7 @@
 /* Descripción: main de royecto integrador. Menu que permite registrarse como entrenador pokemon y realizar actividades relacionadas con esto
 Autores:
-    Mariana Bustos Hernandez - A01641324
-    Mariana Esquivel Hernandez -  A01641244
+Mariana Bustos Hernandez - A01641324
+ Mariana Esquivel Hernandez -  A01641244
 Fecha: 02 12 2021
 */
 #include <iostream>
@@ -120,11 +120,12 @@ void habilidades(Pokebola pokebola) {
     }
 }
 
-//funcion para utilizar la pokebola, permite atrapar a un pokemon
+//Seccion Mariana Bustos
+//funcion para utilizar la pokebola, permite atrapar a un pokemon 
 void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
     int indicePoke = 0;
     string op,op2;
-    cout << "Posees una Pokebola " << endl;
+    cout << "Puedes ahcer uso de una Pokebola " << endl;
     pokebola.imprime();
     cout << "Deseas atrapar un pokemon? " << endl << "1) Si" << endl << "Cualquier otra tecla: No" << endl;
     cin >> op;

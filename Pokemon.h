@@ -1,3 +1,6 @@
+/* Descripcion = declaracion de la clase pokemon
+Autor: Mariana Bustos Hernández - 01641324
+*/
 #ifndef POKEMON_H
 #define POKEMON_H
 #include <string>

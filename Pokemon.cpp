@@ -1,3 +1,6 @@
+/* Descripcion = declaracion de los metodos de la clase pokebola
+Autor: Mariana Bustos Hernández - 01641324
+*/
 #include <iostream>
 #include "Pokemon.h"
 #include <string>
@@ -44,9 +47,17 @@ void Pokemon::setNivel(int _niv) {
 
 //Metodos adicionales
 void Pokemon::imprime() {
-	std::cout << "\n//Pokemones// \nNombre: \t" << nombre << "\nTipo: \t\t" << tipo << "\nNivel: \t\t" << nivel; // << "\nHabilidades: \t\t" << habilidades;
+	std::cout << "----Pokemones----" << std::endl;
+	std::cout << "Nombre: \t" << nombre <<  std::endl;
+	std::cout << "Tipo: \t\t" << tipo << std::endl;
+	std::cout << "Nivel: \t\t" << nivel << std::endl; 
+	std::cout << "Habilidades: " << std::endl;
+	for(int i = 0; i< 3; i++){
+		std::cout << "Habilidad " << i << ": \t\t" << habilidades[i] << std::endl;
+	}
+	
 }
 
 void Pokemon::imprimirHabilidad(int opcion) {
-	std::cout << "La habilidad que el Pokemon " << nombre << " utilizara es: " << habilidades[opcion]; // habilidad
+	std::cout << "La habilidad que el Pokemon " << nombre << " utilizara es: " << habilidades[opcion] << std::endl; 
 }
