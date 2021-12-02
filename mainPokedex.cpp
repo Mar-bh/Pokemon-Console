@@ -34,6 +34,11 @@ void imprimirPokemonDisponible(Pokemon poke[], int cantidad) {
         poke[i].imprime();
         cout << endl;
     }
+    cout << "Todos estos 15 pokemones tienen las mismas habilidades " << endl;
+    cout << "-------Habilidades------ " << std::endl;
+	    for(int i = 0; i < 4; i++){
+		    std::cout << "Habilidad " << i+1 << ": \t\t" << pokebola.getPokemon().getHabilidades(i) << std::endl;
+        }
 }
 
 //Funcion para calcular el Rango del jugador
@@ -143,6 +148,13 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
                 cout << "Opcion invalida" << endl;
             }
         } while(op2!= "1" && op!= "2");
+        if (op2 == "1"){
+            pokebola.getPokemon().imprime();
+            cout << "-------Habilidades------ " << std::endl;
+	        for(int i = 0; i < 4; i++){
+		        std::cout << "Habilidad " << i+1 << ": \t\t" << pokebola.getPokemon().getHabilidades(i) << std::endl;
+        	}
+        }
        
     } else{
         cout << "Decidiste no atrapar ningun pokemon"  << endl;

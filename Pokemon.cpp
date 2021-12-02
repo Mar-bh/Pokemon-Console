@@ -51,11 +51,6 @@ void Pokemon::imprime() {
 	std::cout << "Nombre: \t" << nombre <<  std::endl;
 	std::cout << "Tipo: \t\t" << tipo << std::endl;
 	std::cout << "Nivel: \t\t" << nivel << std::endl; 
-	std::cout << "Habilidades: " << std::endl;
-	for(int i = 0; i< 3; i++){
-		std::cout << "Habilidad " << i << ": \t\t" << habilidades[i] << std::endl;
-	}
-	
 }
 
 void Pokemon::imprimirHabilidad(int opcion) {
