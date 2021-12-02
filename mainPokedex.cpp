@@ -9,10 +9,10 @@ const int CANT = 15; // cantidad de pokemones disponibles
 //const int CANTP = 4; //cantidad de pokebolas disponibles
 
 //Función para agregar a una lista los pokemones en el doc
-void pokemonDisponible(Pokemon poke[],int &cantidad){
+void pokemonDisponible(){ 
     string tipo, nombre;
-    int nivel;
-    cantidad = 0;
+    int nivel, cantidad = 0;
+    Pokemon poke [20];
     ifstream archivo;
     archivo.open("Pokemon.txt");
     while(archivo >> nombre >> tipo >> nivel ){
