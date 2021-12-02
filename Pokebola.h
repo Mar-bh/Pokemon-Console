@@ -10,6 +10,7 @@ class Pokebola {
         Pokebola(std::string, Pokemon);
         std::string getTipo() const;
         Pokemon getPokemon() const;
+        bool  getOcupada() const;
         void setTipo(std::string);
         //void setPokemon(Pokemon);
         int atrapar(Pokemon);

@@ -5,11 +5,13 @@
 Pokebola::Pokebola(){
     tipo = "Pokebola";
     pokemon = Pokemon();
+    ocupada = false;
 }
 
 Pokebola::Pokebola(std::string _tipo, Pokemon _pokemon){
     tipo = _tipo;
     pokemon = _pokemon;
+    ocupada = true;
 }
 
 std::string Pokebola::getTipo() const{
@@ -19,6 +21,11 @@ std::string Pokebola::getTipo() const{
 Pokemon Pokebola::getPokemon() const{
     return pokemon;
 }
+
+bool Pokebola::getOcupada() const{
+    return ocupada;
+}
+
 
 void Pokebola::setTipo(std::string _tipo){
     tipo = _tipo;

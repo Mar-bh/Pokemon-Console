@@ -5,7 +5,9 @@
 #include <string>
 using namespace std;
 
-const int CANT = 15;
+const int CANT = 15; // cantidad de pokemones disponibles
+//const int CANTP = 4; //cantidad de pokebolas disponibles
+
 //Función para agregar a una lista los pokemones en el doc
 void pokemonDisponible(Pokemon poke[],int &cantidad){
     string tipo, nombre;
@@ -21,7 +23,15 @@ void pokemonDisponible(Pokemon poke[],int &cantidad){
     }
     archivo.close();
 }
-//Funcion Rango del jugador
+
+//Funcion para imprimir los pokemones disponibls
+void imprimirPokemonDisponible(Pokemon poke[], int cantidad){
+    for(int i=0; i< cantidad;i++){
+        poke[i].imprime();
+        cout << endl;
+    }
+}
+//Funcion para calcular el Rango del jugador
 std::string rango(int cant_exp, int cant_medallas){
     //    -cant exp (años) int;
     //-cant medallas (numero) int;
@@ -46,6 +56,8 @@ std::string rango(int cant_exp, int cant_medallas){
          return "V";
     }
 }
+
+
 //Función para registrar al entrenador
 Entrenador registrarEntrenador(){
     int opcion = 0;
@@ -54,16 +66,17 @@ Entrenador registrarEntrenador(){
     do {
         cout << "Presiona 1) para registrarte como entrenador o  2) para entrar como invitado" << endl;
         cin >> opcion;
-        if (opcion != 1 || opcion !=2){
+        if (opcion != 1 && opcion !=2){
             cout << "Opcion ingresada invalida" << endl;
         }
-    } while (opcion != 1 || opcion !=2);
+    } while (opcion != 1 && opcion !=2);
     if (opcion==1){
         string nombre;
-        int experiencia, medallas;
+        int experiencia;
+        int medallas;
         cout << "Ingresa tu nombre: ";
 	    cin >> nombre;
-	    cout << "Ingresa tus años de experiencia: ";
+	    cout << "Ingresa tus anios de experiencia: ";
 	    cin >> experiencia;
 	    cout << "Ingresa la cantidad de medalas que posees: ";
 	    cin >> medallas; 
@@ -75,8 +88,10 @@ Entrenador registrarEntrenador(){
         return entrenador;
     }
 }
-//Funcion para seleccionar una habilidad
-int habilidades(){
+
+//Funcion para seleccionar una habilidad del pokemon
+void habilidades(Pokebola pokebola){
+    Pokemon pokemon;
     int validacionPokemon;
     int opcion;
     do{
@@ -88,21 +103,46 @@ int habilidades(){
     } while(validacionPokemon != 1 && validacionPokemon!= 2);
     if (validacionPokemon == 1){
         do {
-        cout << "Wich hability you want to use:\n1)Punch\n2)Special Hability\n3)Acumulated Power\n4)Overkill";
-        cin >> opcion; 
-        if (opcion <= 0 && opcion > 4){
-            cout << "There are only 4 habilities";
-        }
-        }
-        while(opcion <= 0 && opcion > 4);
-         return opcion;
+            cout << "Wich hability you want to use:\n1)Punch\n2)Special Hability\n3)Acumulated Power\n4)Overkill";
+            cin >> opcion; 
+            if (opcion <= 1 && opcion > 4){
+                cout << "There are only 4 habilities";
+            }
+        } while(opcion <= 1 && opcion > 4);
+        pokemon = pokebola.getPokemon();
+        pokemon.imprimirHabilidad(opcion);
+    } else {
+        cout << "Tu pokemon no utilizará ninguna habillidad " << endl;
+    }
+}
+
+void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola){
+    int indicePoke = 0;
+    int op;
+    cout << "Posees una Pokebola " << endl;
+    pokebola.imprime();
+    cout << "¿Deseas atrapar un pokemon? " << endl << "1: Si" << endl << "Cualquier otra tecla: No" <<endl;
+    cin >> op;
+    if (op == 1){
+        do { 
+            cout << "Elige un pokemon, teclea un numero del 1 al 15" << endl;
+            cin >> indicePoke;
+        } while (indicePoke>=1 && indicePoke <=15);
+        pokebola.atrapar(pokemon[indicePoke-1]);
+    }
 }
 
 int main(){
+    Pokemon poke[CANT];
+    Pokebola pokebola;
+    int cantidadPokemon;
     Entrenador entrenador = registrarEntrenador();
-	Entrenador entrenador.imprime();
-    pokemonDisponible();
+	entrenador.imprime();
+    // pokemonDisponible(poke, cantidadPokemon);
+    // imprimirPokemonDisponible(poke, cantidadPokemon);
     //Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
 	//pokemon.imprime();
+    //utilizaPokebola(poke,pokebola);
+    //habilidades(pokebola); 
 }
 

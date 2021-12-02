@@ -50,7 +50,7 @@ void Pokemon::setNivel(int _niv) {
 
 //Metodos adicionales
 void Pokemon::imprime() {
-	std::cout << "\n//Pokemon// \nNombre: \t" << nombre << "\nTipo: \t" << tipo << "\nNivel: \t\t" << nivel << "\nHabilidades: \t\t" << habilidades;
+	std::cout << "\n//Pokemon// \nNombre: \t" << nombre << "\nTipo: \t" << tipo << "\nNivel: \t\t" << nivel; // << "\nHabilidades: \t\t" << habilidades;
 }
 void Pokemon::imprimirHabilidad(int opcion) {
 	std::cout << "La habilidad que el Pokemon"<< nombre << "utilizara es: " << habilidades[opcion]; // habilidad
