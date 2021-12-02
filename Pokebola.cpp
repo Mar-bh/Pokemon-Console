@@ -1,8 +1,6 @@
-#pragma once
 #include <iostream>
 #include "Pokebola.h"
 #include <string>
-using namespace std;
 
 Pokebola::Pokebola() {
     tipo = "Pokebola";
@@ -10,13 +8,13 @@ Pokebola::Pokebola() {
     ocupada = false;
 }
 
-Pokebola::Pokebola(string _tipo, Pokemon _pokemon) {
+Pokebola::Pokebola(std::string _tipo, Pokemon _pokemon) {
     tipo = _tipo;
     pokemon = _pokemon;
     ocupada = true;
 }
 
-string Pokebola::getTipo() const {
+std::string Pokebola::getTipo() const {
     return tipo;
 }
 
@@ -29,7 +27,7 @@ bool Pokebola::getOcupada() const {
 }
 
 
-void Pokebola::setTipo(string _tipo) {
+void Pokebola::setTipo(std::string _tipo) {
     tipo = _tipo;
 }
 
@@ -58,17 +56,17 @@ int Pokebola::liberar() {
 
 void Pokebola::imprime() {
     Pokebola pokebola(tipo, pokemon);
-    cout << "---------------------" << endl;
-    cout << "-------POKEBOLA------" << endl;
-    cout << "Tipo: " << tipo << endl;
+    std::cout << "---------------------" << std::endl;
+    std::cout << "-------POKEBOLA------" << std::endl;
+    std::cout << "Tipo: " << tipo << std::endl;
     if (ocupada == true) {
-        cout << "Contiene Pokemon: ";
+        std::cout << "Contiene Pokemon: ";
         pokemon.imprime();
     }
     else {
-        cout << "Pokebola vacia" << endl;
+        std::cout << "Pokebola vacia" << std::endl;
     }
-    cout << "---------------------" << endl;
+    std::cout << "---------------------" << std::endl;
 }
 
 

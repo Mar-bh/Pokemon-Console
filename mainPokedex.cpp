@@ -1,13 +1,9 @@
-#pragma once
 #include <iostream>
 #include <fstream>
 using namespace std; // Si se pone antes de los include de las Clases, no tenemos que ponerlo en los .h
+#include <string>
 #include "Entrenador.h"
 #include "Pokebola.h"
-#include "Pokemon.h"
-#include "Medalla.h"
-#include <string>
-
 
 const int CANT = 15; // cantidad de pokemones disponibles
 //const int CANTP = 4; //cantidad de pokebolas disponibles
@@ -36,7 +32,7 @@ void imprimirPokemonDisponible(Pokemon poke[], int cantidad) {
     }
 }
 //Funcion para calcular el Rango del jugador
-std::string rango(int cant_exp, int cant_medallas) {
+string rango(int cant_exp, int cant_medallas) {
     int suma;
     suma = cant_exp + cant_medallas;
     if (suma == 0) {
@@ -116,23 +112,34 @@ void habilidades(Pokebola pokebola) {
         pokemon.imprimirHabilidad(opcion);
     }
     else {
-        cout << "Tu pokemon no utilizará ninguna habillidad " << endl;
+        cout << "Tu pokemon no utilizara ninguna habillidad " << endl;
     }
 }
 
 void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
     int indicePoke = 0;
-    string op;
+    string op,op2;
     cout << "Posees una Pokebola " << endl;
     pokebola.imprime();
-    cout << "¿Deseas atrapar un pokemon? " << endl << "1: Si" << endl << "Cualquier otra tecla: No" << endl;
+    cout << "Deseas atrapar un pokemon? " << endl << "1) Si" << endl << "Cualquier otra tecla: No" << endl;
     cin >> op;
     if (op == "1") {
         do {
             cout << "Elige un pokemon, teclea un numero del 1 al 15" << endl;
             cin >> indicePoke;
-        } while (indicePoke >= 1 && indicePoke <= 15);
+        } while (indicePoke <= 1 && indicePoke >= 15);
         pokebola.atrapar(pokemon[indicePoke - 1]);
+        cout << "Has atrapado el pokemon : " << pokebola.getPokemon().getNombre() << endl;
+        do{
+            cout << "Quieres ver la informacion del pokemon: \n1)Si\n2)No"  << endl;
+            cin >> op2;
+            if (op2 != "1" && op!= "2"){
+                cout << "Opcion invalida" << endl;
+            }
+        } while(op2!= "1" && op!= "2");
+       
+    } else{
+        cout << "Decidiste no atrapar ningun pokemon"  << endl;
     }
 }
 
@@ -151,7 +158,7 @@ int main() {
         cout << "Opciones disponibles " << endl;
         cout << " 1) Ver estatus del entrenador " << endl;
         cout << " 2) Ver la lista de Pokemones disponibles " << endl;
-        cout << " 3) Utilizar Pokebola para atrapar o liberar" << endl;
+        cout << " 3) Utilizar Pokebola" << endl;
         cout << " 4) Usar las habilidades de tu Pokemon"<< endl;
         cout << " 5) Salir" << endl;
         cin >> opcion;
