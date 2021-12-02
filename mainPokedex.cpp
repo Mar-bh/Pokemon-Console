@@ -109,7 +109,7 @@ void habilidades(Pokebola pokebola) {
             }
         } while (opcion <= 1 && opcion > 4);
         pokemon = pokebola.getPokemon();
-        pokemon.imprimirHabilidad(opcion);
+        pokemon.imprimirHabilidad(opcion-1);
     }
     else {
         cout << "Tu pokemon no utilizara ninguna habillidad " << endl;

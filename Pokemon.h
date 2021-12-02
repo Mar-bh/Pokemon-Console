@@ -22,7 +22,7 @@ class Pokemon {
         std::string nombre;
         std::string tipo;
         int nivel;
-        std::string habilidades[4] = { "Punch","SpecialHability","AcumulatedPower","Overkill" }; //todos tienen 4       //const int MAX=4;
+        std::string habilidades[4] = {"Golpe","Habilidad especial","Poder acumulado","Poder definitivo" }; //todos tienen 4       //const int MAX=4;
 
 };
 
