@@ -1,3 +1,4 @@
+#pragma once
 #ifndef ENTRENADOR_H
 #define ENTRENADOR_H
 #include <string>
@@ -5,25 +6,25 @@
 
 class Entrenador {
 
-    public:
-        Entrenador();
-        Entrenador(std::string,int,int,std::string);
-        std::string getNombre() const;
-        int getExperiencia() const;
-        int getMedallas() const;
-        std::string getRango() const;
-        void setNombre(std::string);
-	    void setExperiencia(int);
-        void setMedallas(int);
-        void setRango(std::string);
-        void imprime();
-        
-    private:
-        std::string nombre;
-        int experiencia;
-        int medallas;
-        std::string rango;
-        
+public:
+    Entrenador();
+    Entrenador(string, int, int, string);
+    string getNombre() const;
+    int getExperiencia() const;
+    int getMedallas() const;
+    string getRango() const;
+    void setNombre(string);
+    void setExperiencia(int);
+    void setMedallas(int);
+    void setRango(string);
+    void imprime();
+
+private:
+    string nombre;
+    int experiencia;
+    int medallas;
+    string rango;
+
 };
 
 #endif

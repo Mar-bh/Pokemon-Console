@@ -1,37 +1,38 @@
+#pragma once
 #include <iostream>
 #include "Medalla.h"
 #include <string>
+using namespace std;
 
-Medalla::Medalla(){
+Medalla::Medalla() {
     nombre = "Sin medalla";
     valor = "Sin valor";
 }
 
-Medalla::Medalla(std::string _nombre, std::string _valor){
+Medalla::Medalla(string _nombre, string _valor) {
     nombre = _nombre;
     valor = _valor;
 }
 
-std::string Medalla::getNombre() const{
+string Medalla::getNombre() const {
     return nombre;
 }
 
-std::string Medalla::getValor() const{
+string Medalla::getValor() const {
     return valor;
 }
 
-void Medalla::setNombre(std::string _nombre){
+void Medalla::setNombre(string _nombre) {
     nombre = _nombre;
 }
 
-void Medalla::setValor(std::string _valor){
+void Medalla::setValor(string _valor) {
     valor = _valor;
 }
 
-void Medalla::imprime(){
-    std::cout << "--------------MEDALLA----------------" << std::endl;
-    std::cout<< "El nombre es: " << nombre << std::endl; 
-    std::cout<< "El valor es: " << valor << std::endl; 
-   
-}
+void Medalla::imprime() {
+    cout << "--------------MEDALLA----------------" << std::endl;
+    cout << "El nombre es: " << nombre << endl;
+    cout << "El valor es: " << valor << endl;
 
+}

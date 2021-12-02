@@ -1,16 +1,18 @@
 //Implementacion de la clase
+#pragma once
 #include <iostream>
 #include "Entrenador.h"
 #include <string>
+using namespace std;
 
 Entrenador::Entrenador() {
 	nombre = "Invitiado";
 	experiencia = 0;
 	medallas = 0;
-	rango = "Principiante";
+	rango = "NOOB";
 }
 
-Entrenador::Entrenador(std::string _nomb, int _expe, int _meda,std::string _rang) {
+Entrenador::Entrenador(string _nomb, int _expe, int _meda, string _rang) {
 	nombre = _nomb;
 	experiencia = _expe;
 	medallas = _meda;
@@ -18,7 +20,7 @@ Entrenador::Entrenador(std::string _nomb, int _expe, int _meda,std::string _rang
 }
 
 //Metodos de acceso o getters
-std::string Entrenador::getNombre() const {
+string Entrenador::getNombre() const {
 	return nombre;
 }
 
@@ -30,12 +32,12 @@ int Entrenador::getMedallas() const {
 	return medallas;
 }
 
-std::string Entrenador::getRango() const {
+string Entrenador::getRango() const {
 	return rango;
 }
 
 //Metodos modificadores o setters
-void Entrenador::setNombre(std::string _nom) {
+void Entrenador::setNombre(string _nom) {
 	nombre = _nom;
 }
 void Entrenador::setExperiencia(int _exp) {
@@ -44,11 +46,11 @@ void Entrenador::setExperiencia(int _exp) {
 void Entrenador::setMedallas(int _med) {
 	medallas = _med;
 }
-void Entrenador::setRango(std::string _ran) {
+void Entrenador::setRango(string _ran) {
 	rango = _ran;
 }
 
 //Metodos adicionales
 void Entrenador::imprime() {
-	std::cout << "\n//Entrenador// \nNombre: \t" << nombre << "\nExperiencia: \t" << experiencia << "\nMedallas: \t\t" << medallas << "\nRango: \t\t" << rango;
+	cout << "\n\t//Entrenador// \n>>>Nombre: \t\t" << nombre << "\n>>>Experiencia: \t" << experiencia << "\n>>>Medallas: \t\t" << medallas << "\n>>>Rango: \t\t" << rango<<"\n";
 }
