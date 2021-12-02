@@ -7,10 +7,10 @@ using namespace std;
 
 const int CANT = 15;
 //Función para agregar a una lista los pokemones en el doc
-void pokemonDisponible(Pokemon poke[],int &cantidad){
+void pokemonDisponible(){ 
     string tipo, nombre;
-    int nivel;
-    cantidad = 0;
+    int nivel, cantidad = 0;
+    Pokemon poke [20];
     ifstream archivo;
     archivo.open("Pokemon.txt");
     while(archivo >> nombre >> tipo >> nivel ){
@@ -95,12 +95,14 @@ int habilidades(){
         }
         }
         while(opcion <= 0 && opcion > 4);
-         return opcion;
+        return opcion;
+    }
 }
 
-int main(){
+
+int main() {
     Entrenador entrenador = registrarEntrenador();
-	Entrenador entrenador.imprime();
+	entrenador.imprime();
     pokemonDisponible();
     //Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
 	//pokemon.imprime();
