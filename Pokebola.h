@@ -11,7 +11,6 @@ class Pokebola {
         Pokemon getPokemon() const;
         bool  getOcupada() const;
         void setTipo(std::string);
-        //void setPokemon(Pokemon);
         int atrapar(Pokemon);
         int liberar();
         void imprime();

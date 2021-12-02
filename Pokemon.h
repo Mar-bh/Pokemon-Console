@@ -13,11 +13,9 @@ class Pokemon {
         void setNombre(std::string);
         void setTipo(std::string);
         void setNivel(int);
-        //void setHabilidades(std::std::string[]); //cuando tenga menos de 4 habilidades
         void imprime();
         void subirNivel();
         void imprimirHabilidad(int);
-        //void utilizarHabilidad(int); //habilidad
     private:
         std::string nombre;
         std::string tipo;

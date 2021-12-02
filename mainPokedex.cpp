@@ -103,7 +103,7 @@ void habilidades(Pokebola pokebola) {
     if (validacionPokemon == 1) {
         do {
             cout << "¿Qué habilidad deseas usar? :\n1)Golpe\n2)Habilidad especial\n3)Poder acumulado\n4)Poder definitivo" << endl;
-            cin >> opcion; //usar Switch? 
+            cin >> opcion; 
             if (opcion <= 1 && opcion > 4) {
                 cout << "Solo hay 4 habilidades" << endl;
             }
@@ -143,6 +143,19 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
     }
 }
 
+void ingresarMedalla(Entrenador entrenador){
+    string nombre, valor;
+    cout << "-------------------------------" << endl;
+    cout << "Ingresa el nombre de la medalla: " << endl;
+    cin >> nombre;
+    cout << "Ingresa el valor de la medalla: " << endl;
+    cin >> valor;
+    Medalla nuevaMedalla(nombre,valor);
+    int cant;
+    cant = entrenador.getMedallas()+1;
+    cout << entrenador.getNombre() << " ahora tiene " << cant << " medallas " << endl;
+}
+
 
 int main() {
     Pokemon poke[CANT];
@@ -160,7 +173,8 @@ int main() {
         cout << " 2) Ver la lista de Pokemones disponibles " << endl;
         cout << " 3) Utilizar Pokebola" << endl;
         cout << " 4) Usar las habilidades de tu Pokemon"<< endl;
-        cout << " 5) Salir" << endl;
+        cout << " 5) Ingresa una medalla " << endl;
+        cout << " 6) Salir" << endl;
         cin >> opcion;
         switch (opcion) {
             case '1':
@@ -176,11 +190,15 @@ int main() {
                 habilidades(pokebola);
                 break;
             case '5':
+                ingresarMedalla(entrenador);
+                break;
+            case '6':
                 cout << "Elegiste salir del programa..."<< endl;
                 break;
             default:
                 cout << "Opcion invalida"<<endl;
         }
-    } while (opcion != '5');
+        system("Pause");
+    } while (opcion != '6');
     return 0;
 }
