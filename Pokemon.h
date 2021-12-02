@@ -16,6 +16,7 @@ class Pokemon {
         void imprime();
         void subirNivel();
         void imprimirHabilidad(int);
+
     private:
         std::string nombre;
         std::string tipo;
@@ -23,7 +24,6 @@ class Pokemon {
         std::string habilidades[4] = {"Golpe","Habilidad especial","Poder acumulado","Poder definitivo" }; //todos tienen 4       //const int MAX=4;
 
 };
-
 #endif //Pokemon_H
 
 //class Habilidad

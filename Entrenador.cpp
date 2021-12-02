@@ -3,6 +3,7 @@
 #include "Entrenador.h"
 #include <string>
 
+//constructores
 Entrenador::Entrenador() {
 	nombre = "Invitado";
 	experiencia = 0;

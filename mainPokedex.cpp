@@ -1,14 +1,18 @@
+/* Descripción: main de royecto integrador. Menu que permite registrarse como entrenador pokemon y realizar actividades relacionadas con esto
+Autores:
+    Mariana Bustos Hernandez - A01641324
+    Mariana Esquivel Hernandez -  A01641244
+Fecha: 02 12 2021
+*/
 #include <iostream>
 #include <fstream>
 using namespace std; // Si se pone antes de los include de las Clases, no tenemos que ponerlo en los .h
 #include <string>
 #include "Entrenador.h"
 #include "Pokebola.h"
-
 const int CANT = 15; // cantidad de pokemones disponibles
-//const int CANTP = 4; //cantidad de pokebolas disponibles
 
-//Función para agregar a una lista los pokemones en el doc
+//Función para agregar a una lista los pokemones del archivo txt
 void pokemonDisponible(Pokemon poke[],int &cantidad){
     string tipo, nombre;
     int nivel;
@@ -31,6 +35,7 @@ void imprimirPokemonDisponible(Pokemon poke[], int cantidad) {
         cout << endl;
     }
 }
+
 //Funcion para calcular el Rango del jugador
 string rango(int cant_exp, int cant_medallas) {
     int suma;
@@ -54,7 +59,6 @@ string rango(int cant_exp, int cant_medallas) {
         return "V";
     }
 }
-
 
 //Función para registrar al entrenador
 Entrenador registrarEntrenador() {
@@ -116,6 +120,7 @@ void habilidades(Pokebola pokebola) {
     }
 }
 
+//funcion para utilizar la pokebola, permite atrapar a un pokemon
 void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
     int indicePoke = 0;
     string op,op2;
@@ -143,6 +148,7 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
     }
 }
 
+//funcion para ingresar un nueva medalla para el entrenador/usuario
 void ingresarMedalla(Entrenador entrenador){
     string nombre, valor;
     cout << "-------------------------------" << endl;
@@ -156,15 +162,12 @@ void ingresarMedalla(Entrenador entrenador){
     cout << entrenador.getNombre() << " ahora tiene " << cant << " medallas " << endl;
 }
 
-
 int main() {
     Pokemon poke[CANT];
     Pokebola pokebola;
     int cantidadPokemon;
     Entrenador entrenador = registrarEntrenador();
     pokemonDisponible(poke, cantidadPokemon);
-    //Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
-	//pokemon.imprime();
     char opcion;
     do {
         cout << endl; // consultas 
