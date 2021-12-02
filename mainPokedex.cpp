@@ -94,7 +94,7 @@ void habilidades(Pokebola pokebola) {
     int validacionPokemon;
     int opcion;
     do {
-        cout << "Quieres usar tu poquemon?\n1) Si :D\n2) No >:(" << endl;
+        cout << "Quieres usar tu pokemon?\n1) Si :D\n2) No >:(" << endl;
         cin >> validacionPokemon;
         if (validacionPokemon != 1 && validacionPokemon != 2) {
             cout << "Porfavor escoge entre el numero 1 y 2" << endl;
