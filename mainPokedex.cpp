@@ -143,8 +143,10 @@ int main() {
     int cantidadPokemon;
     Entrenador entrenador = registrarEntrenador();
 	entrenador.imprime();
-    // pokemonDisponible(poke, cantidadPokemon);
-    // imprimirPokemonDisponible(poke, cantidadPokemon);
+    pokemonDisponible(poke, cantidadPokemon);
+    imprimirPokemonDisponible(poke, cantidadPokemon);
+
+
     //Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
 	//pokemon.imprime();
     //utilizaPokebola(poke,pokebola);
