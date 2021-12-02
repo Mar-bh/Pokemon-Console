@@ -16,7 +16,7 @@ const int CANT = 15; // cantidad de pokemones disponibles
 void pokemonDisponible() {
     string tipo, nombre;
     int nivel, cantidad = 0;
-    Pokemon poke[20];
+    Pokemon poke[15];
     ifstream archivo;
     archivo.open("Pokemon.txt");
     while (archivo >> nombre >> tipo >> nivel) {
@@ -138,20 +138,15 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
 
 
 int main() {
-    Pokemon poke[CANT];//
+    Pokemon poke[CANT];
     Pokebola pokebola;
-    int cantidadPokemon;//
+    int cantidadPokemon;
     Entrenador entrenador = registrarEntrenador();
-    entrenador.imprime();
-
-    cout << "\nLista de Pokemones disponibles para atrapar: \n" << endl;
-    pokemonDisponible(poke, cantidadPokemon); // ??? 
-    imprimirPokemonDisponible(poke, cantidadPokemon);
-
+	entrenador.imprime();
+    // pokemonDisponible(poke, cantidadPokemon);
+    // imprimirPokemonDisponible(poke, cantidadPokemon);
     //Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
-    
-
-    //pokemon.imprime();
+	//pokemon.imprime();
     //utilizaPokebola(poke,pokebola);
-    //habilidades(pokebola); 
+    //habilidades(pokebola);
 }
