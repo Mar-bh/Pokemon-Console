@@ -37,7 +37,7 @@ void imprimirPokemonDisponible(Pokemon poke[], int cantidad) {
     cout << "Todos estos 15 pokemones tienen las mismas habilidades " << endl;
     cout << "-------Habilidades------ " << std::endl;
 	    for(int i = 0; i < 4; i++){
-		    std::cout << "Habilidad " << i+1 << ": \t\t" << pokebola.getPokemon().getHabilidades(i) << std::endl;
+		    std::cout << "Habilidad " << i+1 << ": \t\t" << poke[1].getHabilidades(i) << std::endl;
         }
 }
 
