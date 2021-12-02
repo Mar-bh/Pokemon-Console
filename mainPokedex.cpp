@@ -13,13 +13,13 @@ const int CANT = 15; // cantidad de pokemones disponibles
 //const int CANTP = 4; //cantidad de pokebolas disponibles
 
 //Función para agregar a una lista los pokemones en el doc
-void pokemonDisponible() {
+void pokemonDisponible(Pokemon poke[],int &cantidad){
     string tipo, nombre;
-    int nivel, cantidad = 0;
-    Pokemon poke[15];
+    int nivel;
+    cantidad = 0;
     ifstream archivo;
     archivo.open("Pokemon.txt");
-    while (archivo >> nombre >> tipo >> nivel) {
+    while(archivo >> nombre >> tipo >> nivel ){
         poke[cantidad].setNombre(nombre);
         poke[cantidad].setTipo(tipo);
         poke[cantidad].setNivel(nivel);
@@ -98,18 +98,18 @@ void habilidades(Pokebola pokebola) {
     int validacionPokemon;
     int opcion;
     do {
-        cout << "Do you want to use your pokemon?\n1) Yes :D\n2) No >:(" << endl;
+        cout << "Quieres usar tu poquemon?\n1) Si :D\n2) No >:(" << endl;
         cin >> validacionPokemon;
         if (validacionPokemon != 1 && validacionPokemon != 2) {
-            cout << "Please choose beetwen 1 and 2" << endl;
+            cout << "Porfavor escoge entre el numero 1 y 2" << endl;
         }
     } while (validacionPokemon != 1 && validacionPokemon != 2);
     if (validacionPokemon == 1) {
         do {
-            cout << "Wich hability you want to use:\n1)Punch\n2)Special Hability\n3)Acumulated Power\n4)Overkill" << endl;
+            cout << "¿Qué habilidad deseas usar? :\n1)Golpe\n2)Habilidad especial\n3)Poder acumulado\n4)Poder definitivo" << endl;
             cin >> opcion; //usar Switch? 
             if (opcion <= 1 && opcion > 4) {
-                cout << "There are only 4 habilities" << endl;
+                cout << "Solo hay 4 habilidades" << endl;
             }
         } while (opcion <= 1 && opcion > 4);
         pokemon = pokebola.getPokemon();
@@ -142,13 +142,38 @@ int main() {
     Pokebola pokebola;
     int cantidadPokemon;
     Entrenador entrenador = registrarEntrenador();
-	entrenador.imprime();
     pokemonDisponible(poke, cantidadPokemon);
-    imprimirPokemonDisponible(poke, cantidadPokemon);
-
-
     //Pokemon pokemon(nombrePoke, tipo, nivel,habilidades);
 	//pokemon.imprime();
-    //utilizaPokebola(poke,pokebola);
-    //habilidades(pokebola);
+    char opcion;
+    do {
+        cout << endl; // consultas 
+        cout << "Opciones disponibles " << endl;
+        cout << " 1) Ver estatus del entrenador " << endl;
+        cout << " 2) Ver la lista de Pokemones disponibles " << endl;
+        cout << " 3) Utilizar Pokebola para atrapar o liberar" << endl;
+        cout << " 4) Usar las habilidades de tu Pokemon"<< endl;
+        cout << " 5) Salir" << endl;
+        cin >> opcion;
+        switch (opcion) {
+            case '1':
+	            entrenador.imprime();
+                break;
+            case '2':
+                imprimirPokemonDisponible(poke, cantidadPokemon);
+                break;
+            case '3': 
+                utilizaPokebola(poke,pokebola);
+                break;
+            case '4':
+                habilidades(pokebola);
+                break;
+            case '5':
+                cout << "Elegiste salir del programa..."<< endl;
+                break;
+            default:
+                cout << "Opcion invalida"<<endl;
+        }
+    } while (opcion != '5');
+    return 0;
 }
