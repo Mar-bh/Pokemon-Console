@@ -1,5 +1,5 @@
 /* Descripcion = declaracion de la clase pokemon
-Autor: Mariana Bustos Hernández - 01641324
+Autor: Mariana Bustos Hernández - a01641324
 */
 #ifndef POKEMON_H
 #define POKEMON_H

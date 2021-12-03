@@ -1,5 +1,5 @@
 /* Descripcion = declaracion de la clase pokebola, que contiene y maneja a los pokemones
-Autor: Mariana Bustos Hernández - 01641324
+Autor: Mariana Bustos Hernández - a01641324
 */
 #ifndef POKEBOLA_H
 #define POKEBOLA_H
