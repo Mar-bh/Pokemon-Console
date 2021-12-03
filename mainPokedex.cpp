@@ -1,7 +1,7 @@
 /* Descripción: main de royecto integrador. Menu que permite registrarse como entrenador pokemon y realizar actividades relacionadas con esto
 Autores:
 Mariana Bustos Hernandez - A01641324
- Mariana Esquivel Hernandez -  A01641244
+Mariana Esquivel Hernandez -  A01641244
 Fecha: 02 12 2021
 */
 #include <iostream>
@@ -13,7 +13,7 @@ using namespace std; // Si se pone antes de los include de las Clases, no tenemo
 const int CANT = 15; // cantidad de pokemones disponibles
 
 //Función para agregar a una lista los pokemones del archivo txt
-void pokemonDisponible(Pokemon poke[],int &cantidad){
+void pokemonDisponible(Pokemon poke[],int &cantidad){ //Ambos miembros del equipo
     string tipo, nombre;
     int nivel;
     cantidad = 0;
@@ -29,20 +29,20 @@ void pokemonDisponible(Pokemon poke[],int &cantidad){
 }
 
 //Funcion para imprimir los pokemones disponibles
-void imprimirPokemonDisponible(Pokemon poke[], int cantidad) {
+void imprimirPokemonDisponible(Pokemon poke[], int cantidad) { //Mariana Bustos
     for (int i = 0; i < cantidad; i++) {
         poke[i].imprime();
         cout << endl;
     }
     cout << "Todos estos 15 pokemones tienen las mismas habilidades " << endl;
     cout << "-------Habilidades------ " << std::endl;
-	    for(int i = 0; i < 4; i++){
-		    std::cout << "Habilidad " << i+1 << ": \t\t" << poke[1].getHabilidades(i) << std::endl;
-        }
+    for(int i = 0; i < 4; i++){
+		std::cout << "Habilidad " << i+1 << ": \t\t"<< poke[1].getHabilidades(i) << std::endl;
+    }
 }
 
 //Funcion para calcular el Rango del jugador
-string rango(int cant_exp, int cant_medallas) {
+string rango(int cant_exp, int cant_medallas) { //Mariana Esquivel
     int suma;
     suma = cant_exp + cant_medallas;
     if (suma == 0) {
@@ -66,7 +66,7 @@ string rango(int cant_exp, int cant_medallas) {
 }
 
 //Función para registrar al entrenador
-Entrenador registrarEntrenador() {
+Entrenador registrarEntrenador() { //Ambos miembros del equipo
     int opcion = 0;
     cout << "---------------------" << endl;
     cout << "------BIENVENIDO-----" << endl;
@@ -98,7 +98,7 @@ Entrenador registrarEntrenador() {
 }
 
 //Funcion para seleccionar una habilidad del pokemon
-void habilidades(Pokebola pokebola) {
+void habilidades(Pokebola pokebola) { //Mariana Esquivel
     Pokemon pokemon;
     int validacionPokemon;
     int opcion;
@@ -125,9 +125,8 @@ void habilidades(Pokebola pokebola) {
     }
 }
 
-//Seccion Mariana Bustos
 //funcion para utilizar la pokebola, permite atrapar a un pokemon 
-void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
+void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) { //Mariana Bustos
     int indicePoke = 0;
     string op,op2;
     cout << "Puedes ahcer uso de una Pokebola " << endl;
@@ -144,10 +143,10 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
         do{
             cout << "Quieres ver la informacion del pokemon: \n1)Si\n2)No"  << endl;
             cin >> op2;
-            if (op2 != "1" && op!= "2"){
+            if (op2 != "1" && op2!= "2"){
                 cout << "Opcion invalida" << endl;
             }
-        } while(op2!= "1" && op!= "2");
+        } while(op2!= "1" && op2!= "2");
         if (op2 == "1"){
             pokebola.getPokemon().imprime();
             cout << "-------Habilidades------ " << std::endl;
@@ -162,7 +161,7 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) {
 }
 
 //funcion para ingresar un nueva medalla para el entrenador/usuario
-void ingresarMedalla(Entrenador entrenador){
+void ingresarMedalla(Entrenador entrenador){ //Mariana Bustos
     string nombre, valor;
     cout << "-------------------------------" << endl;
     cout << "Ingresa el nombre de la medalla: " << endl;
@@ -179,7 +178,7 @@ int main() {
     Pokemon poke[CANT];
     Pokebola pokebola;
     int cantidadPokemon;
-    Entrenador entrenador = registrarEntrenador();
+    Entrenador entrenador = registrarEntrenador(); 
     pokemonDisponible(poke, cantidadPokemon);
     char opcion;
     do {

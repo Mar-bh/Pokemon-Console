@@ -1,3 +1,6 @@
+/* Descripcion: declaracion de los metodos de la clase pokebola
+Autor: Mariana Esquivel Hernández - 
+*/
 #ifndef MEDALLA_H
 #define MEDALL_H
 #include <string>
