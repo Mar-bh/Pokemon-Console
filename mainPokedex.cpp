@@ -143,10 +143,10 @@ void utilizaPokebola(Pokemon pokemon[], Pokebola pokebola) { //Mariana Bustos
         do{
             cout << "Quieres ver la informacion del pokemon: \n1)Si\n2)No"  << endl;
             cin >> op2;
-            if (op2 != "1" && op!= "2"){
+            if (op2 != "1" && op2!= "2"){
                 cout << "Opcion invalida" << endl;
             }
-        } while(op2!= "1" && op!= "2");
+        } while(op2!= "1" && op2!= "2");
         if (op2 == "1"){
             pokebola.getPokemon().imprime();
             cout << "-------Habilidades------ " << std::endl;
