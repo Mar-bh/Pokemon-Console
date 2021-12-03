@@ -1,3 +1,6 @@
+/* Descripcion = declaracion de los metodos de la clase Medalla
+Autor: Mariana Esquivel Hernández - 01641224
+*/
 #include <iostream>
 #include "Medalla.h"
 #include <string>
