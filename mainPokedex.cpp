@@ -12,7 +12,6 @@ using namespace std; // Si se pone antes de los include de las Clases, no tenemo
 #include "Pokebola.h"
 const int CANT = 15; // cantidad de pokemones disponibles
 
-
 //Función para agregar a una lista los pokemones del archivo txt
 void pokemonDisponible(Pokemon poke[],int &cantidad){ //Ambos miembros del equipo
     string tipo, nombre;
